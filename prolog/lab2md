@@ -1,0 +1,73 @@
+cw 1.1
+"true", nie potrzeba faktu para/2
+
+cw1.2
+"ground(para(X,X))." = "false"
+"ground(para(tom,tom))." = "true"
+
+cw 1.3
+cw 1.4 
+cw 1.5
+
+cw 2.1
+"true", ponieważ nie ma psa "Tom", brak dowodu w bazie 
+cw 2.2
+"kot(tom)." = "true"
+"\+ kot(tom)." ="false"
+negacja ma sukces w bazie gdy 
+cw 2.3
+cw 2.4
+cw 2.5
+
+cw 3.1
+"lubi(filip,ania)." = "true"
+"lubi(ania,filip)." = "false"
+Filip lubi Anie , Ania nie lubi Filipa = kierunek jest wazny
+cw 3.2
+lubi(Kto,dawid). = Kto = bartek
+cw 3.3
+cw 3.4
+cw 3.5
+
+
+cw 4.1
+wzajemna_sympatia(X,Y) :- plec(X,kobieta), plec(Y,mezczyzna), lubi(X,Y), lubi(Y,X).
+wzajemna_sympatia(X,Y).
+X = ania,
+Y = bartek
+X = ewa,
+Y = filip
+cw 4.2
+nieprzyjazn(X,Y) :- unika(X,Y), unika(X,Y) .
+nieprzyjazn(X,Y)
+X = celina,
+Y = filip
+X = filip,
+Y = celina
+cw 4.3 
+niby_przyjazn(X,Y) :- lubi(X,Y), \+ lubi(Y,X) .
+niby_przyjazn(X,Y)
+X = dawid,
+Y = ewa
+X = filip,
+Y = ania
+X = bartek,
+Y = dawid
+cw 4.4
+cw 4.5
+
+
+
+
+
+cw 5.1
+unika(X,Y), \+ unika(Y,X).
+X = dawid,
+Y = bartek
+cw 5.2
+osoba(X), dif(X,ania), \+ lubi(X,ania).
+X = dawid
+X = ewa
+cw 5.3
+cw 5.4
+cw 5.5
